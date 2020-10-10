@@ -1,0 +1,82 @@
+{
+  "name": "vscode-env",
+  "displayName": "ENV",
+  "description": "Adds formatting and syntax highlighting support for env files (.env) to Visual Studio Code",
+  "version": "0.1.0",
+  "publisher": "IronGeek",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IronGeek/vscode-env.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IronGeek/vscode-env/issues"
+  },
+  "homepage": "https://github.com/IronGeek/vscode-env/blob/master/README.md",
+  "engines": {
+    "vscode": "^1.49.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Other"
+  ],
+  "keywords": [
+    "env",
+    "dotenv"
+  ],
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#ECD53F",
+    "theme": "light"
+  },
+  "activationEvents": [
+    "onLanguage:env"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "env",
+        "aliases": [
+          "Environment Variables",
+          "dotenv"
+        ],
+        "extensions": [
+          ".env",
+          ".env.sample",
+          ".env.example"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "env",
+        "scopeName": "source.env",
+        "path": "./syntaxes/env.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "build": "npm run compile && npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.8",
+    "@types/vscode": "^1.50.0",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "eslint": "^7.11.0",
+    "husky": "^4.3.0",
+    "typescript": "^4.0.2"
+  }
+}

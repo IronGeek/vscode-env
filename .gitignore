@@ -1,0 +1,4 @@
+out
+test
+node_modules
+*.vsix
