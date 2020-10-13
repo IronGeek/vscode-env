@@ -1,5 +1,9 @@
 # ENV
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/IronGeek/vscode-env/Publish?logo=github-actions&logoColor=ffffff)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/IronGeek/vscode-env?logo=github)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/IronGeek/vscode-env)
+![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/IronGeek.vscode-env?logo=visual-studio-code)
 ![GitHub](https://img.shields.io/github/license/IronGeek/vscode-env)
 
 Adds formatting and syntax highlighting support for env files (`.env`) to Visual Studio Code  
