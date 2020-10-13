@@ -1,5 +1,7 @@
 # ENV
 
+![GitHub](https://img.shields.io/github/license/IronGeek/vscode-env)
+
 Adds formatting and syntax highlighting support for env files (`.env`) to Visual Studio Code  
 
 ## Features
