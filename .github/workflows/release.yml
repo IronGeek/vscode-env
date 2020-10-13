@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  release:
+    types:
+      - published
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+    - name: Compile
+      run: |
+        npm ci
+        npm run build
+    - name: Deploy
+      if: success() && startsWith( github.ref, 'refs/tags/v')
+      run: npm run deploy
+      env:
+        VSCE_PAT: ${{ secrets.VSCE_PAT }}
