@@ -1,6 +1,6 @@
 # ENV
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/IronGeek/vscode-env/Build?logo=github-actions&logoColor=ffffff)
+![GitHub build](https://github.com/IronGeek/vscode-env/workflows/Build/badge.svg)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/IronGeek/vscode-env?logo=github)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/IronGeek/vscode-env)
 ![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/IronGeek.vscode-env?label=VS%20Marketplace&logo=visual-studio-code)
