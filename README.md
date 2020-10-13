@@ -36,7 +36,7 @@ Adds formatting and syntax highlighting support for env files (`.env`) to Visual
 
 ## Custom env file extension
 
-The extension support env files with the following extensions:
+The extension support env files with the following name:
 
 - `.env`
 - `.env.sample`
@@ -44,12 +44,12 @@ The extension support env files with the following extensions:
 
 To enable support for other env files with specific naming convention/ file extension, use the `files.associations` settings in Visual Studio Code.
 
-For example, the following settings will enable support for `.env.development` and `.env.production` files:
+For example, the following settings will enable support for `*.env.development` and `*.env.production` files:
 
 ```json
   "files.associations": {
-    ".env.development": "env",
-    ".env.production": "env"
+    "*.env.development": "env",
+    "*.env.production": "env"
   }
 ```
 
