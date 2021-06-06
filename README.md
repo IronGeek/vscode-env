@@ -53,6 +53,21 @@ For example, the following settings will enable support for `*.env.development` 
   }
 ```
 
+## Known Issues
+
+- Highlighting/ Formatting/ Folding doesn't work
+
+  Other extensions (like [shell-format](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format)) could also provides contributions to env files (`.env`). When two or more extensions providing contributions to a same file, there's a chance the contributions of previous extension will be overwritten by the later (see: [github.com/microsoft/vscode-docs/issues/2862](https://github.com/microsoft/vscode-docs/issues/2862#issuecomment-599994967)).
+
+  To workaround this issue, use Visual Studio Code `files.associations` to force the language of `.env` files to be always specified as `env`:
+
+  ![Issue #3: Workaround 1](images/issue-3.1.png)
+
+  Other non permanent solution is by using the `Select Language Mode` button on the Visual Studio Code status bar and set the language to `Environment Variables` (alias of `env`) on the opened file:
+
+  ![Issue #3: Workaround 2](images/issue-3.2.png)
+
+
 ## Acknowledgements
 
 - [Mike Stead](https://github.com/mikestead) for [dotenv extension for vscode](https://github.com/mikestead/vscode-dotenv)  
